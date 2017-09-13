@@ -8,6 +8,8 @@ This renders static images, generated via gravizo.com
 
 Demo : http://revolunet.github.io/react-gravizo
 
+Sandbox : https://codesandbox.io/s/42n35on6n7
+
 ## Usage
 
 To generate this image :
