@@ -10,6 +10,12 @@ Demo : http://revolunet.github.io/react-gravizo
 
 ## Usage
 
+To generate this image :
+
+![demo](./demo.png)
+
+Use this example :
+
 ```js
 const Gravizo = require('react-gravizo');
 
