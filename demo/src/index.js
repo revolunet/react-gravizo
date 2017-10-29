@@ -1,10 +1,10 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
-import GithubCorner from 'react-github-corner';
+import React, { Component } from "react";
+import { render } from "react-dom";
+import GithubCorner from "react-github-corner";
 
-import Gravizo from '../../src'
+import Gravizo from "../../src";
 
-const uml=`
+const uml = `
 @startuml;
 (*) -->[bookeo payment] "webhook endpoint";
 
@@ -25,16 +25,34 @@ else;
 endif;
 
 @enduml
-`
+`;
+
+const digraph = `
+ digraph G {
+   main -> parse -> execute;
+   main -> init;
+   main -> cleanup;
+   execute -> make_string;
+   execute -> printf
+   init -> make_string;
+   main -> printf;
+   execute -> compare;
+ }
+`;
 
 class Demo extends Component {
   render() {
-    return <div>
-      <h1>react-gravizo Demo</h1>
-      <GithubCorner href="https://github.com/revolunet/react-gravizo" />
-      <Gravizo uml={uml} width={400}/>
-    </div>
+    return (
+      <div>
+        <h1>react-gravizo Demo</h1>
+        <GithubCorner href="https://github.com/revolunet/react-gravizo" />
+        <Gravizo graph={uml} width={400} />
+        <br />
+        <br />
+        <Gravizo graph={digraph} width={400} />
+      </div>
+    );
   }
 }
 
-render(<Demo/>, document.querySelector('#demo'))
+render(<Demo />, document.querySelector("#demo"));
