@@ -4,9 +4,11 @@
 
 Generates Graphviz schemas from source code with [gravizo.com](http://gravizo.com/)
 
-This renders static images, generated via gravizo.com
+Support DOT, PlantUML or UMLGraph formats.
 
-Demo : http://revolunet.github.io/react-gravizo
+This renders static images, generated via gravizo.com backend with a free anonymous plan.
+
+Demo : https://codesandbox.io/s/42n35on6n7
 
 Sandbox : https://codesandbox.io/s/42n35on6n7
 
@@ -44,7 +46,7 @@ endif;
 @enduml
 `
 
-const Demo = () => <Gravizo uml={uml} width={400}/>
+const Demo = () => <Gravizo graph={uml} width={400}/>
 ```
 
 See also [demo](http://revolunet.github.io/react-gravizo)

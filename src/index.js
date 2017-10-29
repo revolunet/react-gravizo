@@ -7,9 +7,9 @@ const encode = str => {
     .replace(/%5D/g, "]");
 };
 
-const Gravizo = ({ uml, ...props }) => {
-  const src = `http://gravizo.com/svg?${encode(uml)}`;
+const Gravizo = ({ graph, ...props }) => {
+  const src = `http://gravizo.com/svg?${encode(graph)}`;
   return <img {...props} src={src} />;
 };
 
-export default Gravizo
+export default Gravizo;
